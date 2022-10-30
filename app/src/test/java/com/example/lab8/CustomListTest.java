@@ -98,7 +98,7 @@ public class CustomListTest {
      */
 
     @Test
-    public void countTest(){
+    public void getCountTest(){
         //no cities
         list = MockCityList();
         assertEquals(0,list.getCount());
