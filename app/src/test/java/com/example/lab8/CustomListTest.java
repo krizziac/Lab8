@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 //import org.junit.Before;
+import org.junit.Assert;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -35,5 +36,33 @@ public class CustomListTest {
         list.addCity(new City("Estevan", "SK"));
         assertEquals(list.getCount(),listSize + 1);
     }
+
+
+    /**
+     * checks if there is a given city inside the list of cities
+     * this test will check if to see if an EXISTING city is in the list
+     */
+
+    @Test
+    public void hasCityTest1(){
+        list  = MockCityList();
+        City city = new City("Estevan", "SK");
+        list.addCity(new City("Estevan", "SK"));
+
+        list.hasCity(city);
+
+        Assert.assertEquals(true,list.hasCity(city));
+
+    }
+
+    /**
+     * checks if a NON-existing city is in the list
+     */
+    @Test
+    public void hasCityTest2(){
+
+    }
+
+
 
 }
