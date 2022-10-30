@@ -49,8 +49,6 @@ public class CustomListTest {
         City city = new City("Estevan", "SK");
         list.addCity(city);
 
-        list.hasCity(city);
-
         Assert.assertEquals(true,list.hasCity(city));
 
     }
@@ -60,6 +58,10 @@ public class CustomListTest {
      */
     @Test
     public void hasCityTest2(){
+        list = MockCityList();
+        City city = new City("Yellowknife", "NT");
+        Assert.assertEquals(false,list.hasCity(city));
+
 
     }
 
