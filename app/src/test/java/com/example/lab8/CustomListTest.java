@@ -80,6 +80,9 @@ public class CustomListTest {
 
     }
 
+    /**
+     * this test will delete a city from the list
+     */
     @Test
     public void deleteTest2(){
         list = MockCityList();
