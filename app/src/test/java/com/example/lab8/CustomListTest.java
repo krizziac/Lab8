@@ -93,5 +93,25 @@ public class CustomListTest {
 
     }
 
+    /**
+     * testing to see if the getCount returns correct size
+     */
+
+    @Test
+    public void countTest(){
+        //no cities
+        list = MockCityList();
+        assertEquals(0,list.getCount());
+
+        City city = new City("Yellowknife", "NT");
+        list.addCity(city);
+        assertEquals(1,list.getCount());
+
+        City city2 = new City("Edmonton", "AB");
+        list.addCity(city2);
+        assertEquals(2,list.getCount());
+
+    }
+
 
 }
