@@ -66,7 +66,5 @@ public class CustomList extends ArrayAdapter<City> {
         if (!cities.contains(city)) { //makes sure that we are not deleting a non-existing city
             throw new IllegalArgumentException();
         }
-        cities.remove(city);
-
     }
 }
